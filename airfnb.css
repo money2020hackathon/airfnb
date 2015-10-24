@@ -23,52 +23,54 @@ body {
   margin: 0;
 }
 
+/*
+	NAVBAR
+*/
+
 .navbar {
-	border: 1px solid white;
 	height: 15px;
 	padding: 0px;
 	margin: 0px;
-}
-
-.navbar li {
-	border: 1px solid white;
-	list-style-type: none;
-	color: white;
-	display: inline;
-	font-family: 'myFont';
-	font-size: 15px;
-	padding-top: 5px;
-}	
-
-.navbar a {
-	text-decoration: none;
-	color: white;
-	width: auto;
-	height: auto;
 	display: block;
 }
 
-.navbar a:hover {
-	opacity: 0.5;
+.navbar ul {
+	margin-top: 10px;
 }
 
-.nav-right ul, .nav-left ul {
-	padding: 0px;
-	margin: 0px;
-	display: inline-block;
-}
-
-.nav-right li {
-	padding: 0px;
-	margin: 0px;
-	float: right;
-	padding-right: 20px;
+.navbar li {
+	list-style-type: none;
+	color: white;
+	font-family: 'myFont';
+	font-size: 18px;
+	padding: 5px;	
 	display: inline;
+}	
+
+.pull-right {
+	padding-right: 15px;
 }
 
-.nav-left li {
-	padding: 0px;
-	margin: 0px;
-	float: left;
-	display: inline;
+.homeWelcome {
+	text-align: center;
+	color: white;
 }
+
+/*
+	LOGIN PAGE
+*/
+.loginWelcome {
+	color: white;
+	text-align: center;
+	height: 100%;
+}
+
+.login-right, .login-left {
+	width: 48%;
+	height: 60%;
+	margin: 10px;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+

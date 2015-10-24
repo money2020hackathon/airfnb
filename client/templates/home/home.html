@@ -1,15 +1,33 @@
 <template name="home">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<div class="navbar">
-		<ul class="nav-right">
-			<li><a href="#about">About</a></li>
-			<li><a href="#signup">Sign Up</a></li>
+	<div class="navbar">		
+		<ul class="pull-right">
+			<li id="about">About</li>
+			<li id="signup">Sign Up</li>
 			<li id="login">Login</li>
 		</ul>
 
-		<ul class="nav-left">
+		<ul class="pull-left">
 			<li><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  AirFnB</li>
 		</ul>
 	</div>
+
+	<div class="homeWelcome">
+		<h1><b>Hungry...?</b></h1>
+	</div>
+
+	<div class="loginWelcome">
+		<div id="loginUser" class="col-md-6 login-left">
+			<h1>Finding ways....?</h1>
+			<h2>Be a cook</h2>
+		</div>
+
+		<div id="listingPage" class="col-md-6 login-right">
+			<h1>Rushing for time...?</h1>
+			<h2>Choose a meal</h2>
+		</div>
+	</div>
+	
+
 </template>
