@@ -50,3 +50,6 @@ particle4dev:cordova-fb
 
 npm-container
 twbs:bootstrap
+fourseven:scss
+materialize:materialize
+mdg:camera
