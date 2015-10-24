@@ -1,3 +1,3 @@
-<template name="login">
-
-</template>
+Template.login.helpers({
+  
+});
