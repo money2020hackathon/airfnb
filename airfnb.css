@@ -1,1 +1,74 @@
 /* CSS declarations go here */
+@font-face {
+	font-family: 'myFont';
+	src: url('font/HelveticaNeue-UltraLight.eot');
+	src: url('font/HelveticaNeue-UltraLight.woff') format('woff'),
+		 url('font/HelveticaNeue-UltraLight.ttf') format('truetype'),
+		 url('font/HelveticaNeue-UltraLight.svg') format('svg');
+}
+/* CSS declarations go here */
+body {
+  font-family: 'myFont';
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+	border: 1px solid white;
+	height: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar li {
+	border: 1px solid white;
+	list-style-type: none;
+	color: white;
+	display: inline;
+	font-family: 'myFont';
+	font-size: 15px;
+	padding-top: 5px;
+}	
+
+.navbar a {
+	text-decoration: none;
+	color: white;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.navbar a:hover {
+	opacity: 0.5;
+}
+
+.nav-right ul, .nav-left ul {
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+
+.nav-right li {
+	padding: 0px;
+	margin: 0px;
+	float: right;
+	padding-right: 20px;
+	display: inline;
+}
+
+.nav-left li {
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	display: inline;
+}
