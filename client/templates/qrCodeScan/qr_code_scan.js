@@ -21,9 +21,11 @@ function scanBarcode() {
                 }
                 else
                 {
-                  Router.go('qrCodeFinished', {'_id':result.text});
+
                   //update result
+                  Router.go('qrCodeFinished', {'_id':result.text});
                 }
+
               });
             }
         },
@@ -38,6 +40,10 @@ Template.qrCodeScan.helpers({
     return true;
   },
   qrCode:function(){
+    if(descriptionCharCount.get().length > 0){
+      Router.go('qrCodeFinished', {'_id':descriptionCharCount.get()});
+    }
+
     return descriptionCharCount.get();
   }
 });

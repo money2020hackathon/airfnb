@@ -1,6 +1,6 @@
 Template.profilePage.onRendered(function(){
-	$(".button-collapse").sideNav();
-  	$(".dropdown-button").dropdown();
+	//$(".button-collapse").sideNav();
+  	//$(".dropdown-button").dropdown();
 });
 
 Template.profilePage.events({
