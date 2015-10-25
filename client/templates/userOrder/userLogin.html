@@ -11,6 +11,9 @@
 </script>
 	<div>
 	<section>
+		{{#each listedItems}}
+	    {{> listingItem}}
+	  {{/each}}
 		<div class="col-md-6 col-xs-12">
 			<div class="card">
 			    <div class="card-image waves-effect waves-block waves-light">
@@ -79,7 +82,7 @@
 			    			<li>Best Kung Pao Chicken that I’ve ever tasted in the US. Definitely recommended!</li>
 			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
 			    		</ul>
-			    	</div>	
+			    	</div>
 			    	<div class="card-review">
 			    		<img src="/hw.jpg" class="col-md-3">
 			    		<ul class="col-md-9">
@@ -162,7 +165,7 @@
 			    			<li>Juiciest Chicken Chop that I’ve ever had.</li>
 			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
 			    		</ul>
-			    	</div>	
+			    	</div>
 			    	<div class="card-review">
 			    		<img src="/ryanong.jpg" class="col-md-3">
 			    		<ul class="col-md-9">
@@ -174,6 +177,6 @@
 			</div>
 		</div>
 	</section>
-		
+
 	</div>
 </template>

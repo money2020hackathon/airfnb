@@ -29,3 +29,22 @@ Template.userLogin.events({
   }
 
 });
+
+Template.userLogin.helpers({
+	listedItems:function(){
+		return OrderCollection.find({});
+		return OrderCollection.find(
+      {
+        location:{
+          $near:{
+            $geometry:{
+              type:"Point",
+              coordinates:[currentLocation.lng, currentLocation.lat]
+            },
+            $maxDistance: 5 * 1609
+          }
+        }
+      }
+    );
+	}
+})

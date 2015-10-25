@@ -250,7 +250,7 @@ Template.createOrderPage.events({
     var collectStart = $('#collectStartHour').val();
     var collectEnd = $('#collectEndHour').val();
     var dateStart = $('#dateStart').val();
-    var image = imageurl;
+    var image = imageurl.get();
 
     var convertedDate = new Date(dateStart).valueOf();
     orderEnd = convertedDate + (orderEnd * 3600000);
@@ -276,6 +276,7 @@ Template.createOrderPage.events({
             else
             {
               //update result
+              Router.go('userLogin');
             }
 
         return;

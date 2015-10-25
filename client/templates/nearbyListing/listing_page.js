@@ -78,6 +78,7 @@ Template.listingPage.helpers({
     //updated.set(updated.get() + 1);
 
     return OrderCollection.find({});
+    /*
     return OrderCollection.find(
       {
         location:{
@@ -90,7 +91,7 @@ Template.listingPage.helpers({
           }
         }
       }
-    );
+    );*/
   },
   subscriptionIsReady:function(){
     return true;
