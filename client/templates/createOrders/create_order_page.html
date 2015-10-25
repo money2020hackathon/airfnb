@@ -38,69 +38,42 @@
 			</div>
 
 			<div class="row">
-				<div class="input-field col s4">
+				<div class="input-field col s6">
     				<select id="orderEndHour">
     					<option value="" disabled selected>Hour</option>
-    					<option value="1">6pm</option>
-    					<option value="2">7pm</option>
-    					<option value="3">8pm</option>
+    					<option value="8">8am</option>
+    					<option value="12">12pm</option>
+    					<option value="16">4pm</option>
     				</select>
     				<label>Orders close by: </label>
     			</div>
-    			<div class="input-field col s4">
-    				<select id="orderEndMinute">
-    					<option value="" disabled selected>Minutes</option>
-    					<option value="1">0</option>
-    					<option value="2">15</option>
-    					<option value="3">30</option>
-    					<option value="3">45</option>
-    				</select>
-    			</div>
-    			<div class="input-field col s4">
-					<input type="date" class="datepicker" placeholder="Pick a date">
+    			<div class="input-field col s6">
+					<input id="dateStart" type="date" class="datepicker" placeholder="Pick a date">
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="input-field col s3">
+				<div class="input-field col s6">
     				<select id="collectStartHour">
     					<option value="" disabled selected>Hour</option>
-    					<option value="1">6pm</option>
-    					<option value="2">7pm</option>
-    					<option value="3">8pm</option>
+    					<option value="12">12pm</option>
+    					<option value="15">3pm</option>
+    					<option value="17">5pm</option>
     				</select>
     				<label>Collect from: </label>
     			</div>
-    			<div class="input-field col s3">
-    				<select id="collectStartMinute">
-    					<option value="" disabled selected>Minutes</option>
-    					<option value="1">0</option>
-    					<option value="2">15</option>
-    					<option value="3">30</option>
-    					<option value="3">45</option>
-    				</select>
-    			</div>
-    				<div class="input-field col s3">
+    				<div class="input-field col s6">
     				<select id="collectEndHour">
     					<option value="" disabled selected>Hour</option>
-    					<option value="1">6pm</option>
-    					<option value="2">7pm</option>
-    					<option value="3">8pm</option>
+    					<option value="14">2pm</option>
+    					<option value="17">5pm</option>
+    					<option value="19">7pm</option>
     				</select>
     				<label>To: </label>
     			</div>
-    			<div class="input-field col s3">
-    				<select id="collectEndMinute">
-    					<option value="" disabled selected>Minutes</option>
-    					<option value="1">0</option>
-    					<option value="2">15</option>
-    					<option value="3">30</option>
-    					<option value="3">45</option>
-    				</select>
-    			</div>
 			</div>
 
-			<button class="btn waves-effect waves-light" type="submit" name="action" id="createOrder">Create<i class="fa fa-send fa-4x right"></i>
+			<button class="btn waves-effect waves-light" name="action" id="createOrder">Create<i class="fa fa-send fa-4x right"></i>
 
 			</button>
 		</form>

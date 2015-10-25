@@ -215,19 +215,6 @@ Template.createOrderPage.events({
         path_input.trigger('change');
       });
   },
-  'click #createOrder':function(){
-
-    /*
-    'name':orderData.name,
-    'ownerId':orderData.ownerId,
-    'price':orderData.price,
-    'images':orderData.images,
-    'limit':orderData.limit,
-    'expiryTime':orderData.expiryDate,
-    'creationTime':(new Date()).valueOf(),
-    'location':orderData.location,
-    'collected':0*/
-  },
   'click #imageUploadButton':function(){
     //console.log($('#messageText').val());
     //addingImage.set(false);
@@ -254,10 +241,68 @@ Template.createOrderPage.events({
     }
   },
   'click #createOrder':function(){
-    
+    var currentLocation = Geolocation.latLng();
+
+    var name = $('#icon_prefix').val();
+    var price = $('#icon_price').val();
+    var limit = $('#icon_dining').val();
+    var orderEnd = $('#orderEndHour').val();
+    var collectStart = $('#collectStartHour').val();
+    var collectEnd = $('#collectEndHour').val();
+    var dateStart = $('#dateStart').val();
+    var image = imageurl;
+
+    var convertedDate = new Date(dateStart).valueOf();
+    orderEnd = convertedDate + (orderEnd * 3600000);
+    collectStart = convertedDate + (collectStart * 3600000);
+    collectEnd = convertedDate + (collectEnd * 3600000);
+
+    var payload = {
+      'name': name,
+      'price': price,
+      'images': image,
+      'limit': limit,
+      'expiryTime': orderEnd,
+      'deliveryTime': collectStart,
+      'deliveryEnd': collectEnd,
+      'location': currentLocation
+    };
+
+    Meteor.call('addOrderListing', payload, function(error, result){
+            if(error)
+            {
+              sAlert.error(error, {effect: 'genie', position:'top', offset: '30px'});
+            }
+            else
+            {
+              //update result
+            }
+
+        return;
+    });
+
+/*
+    OrderCollection.insert(
+      {
+        'name':orderData.name,
+        'ownerId':Meteor.userId(),
+        'price':orderData.price,
+        'images':orderData.images,
+        'limit':orderData.limit,
+        'expiryTime':orderData.expiryTime,
+        'deliveryTime':orderData.deliveryTime,
+        'deliveryEnd':orderData.deliveryEnd,
+        'creationTime':(new Date()).valueOf(),
+        'location':orderData.location,
+        'collected':0,
+        'orderedUsers':[]
+      }
+    );*/
   }
 
 });
+
+var currentLocation = Geolocation.latLng();
 
 Template.createOrderPage.onRendered(function(){
   $('select').material_select();
