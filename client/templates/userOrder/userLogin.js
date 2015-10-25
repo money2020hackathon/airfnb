@@ -6,8 +6,8 @@ Template.userLogin.onRendered(function(){
 		function toToggle(info) {
 			$(info).toggle();
 		}
-  $(".button-collapse").sideNav();
-  $(".dropdown-button").dropdown();
+  //$(".button-collapse").sideNav();
+  //$(".dropdown-button").dropdown();
 });
 
 Template.userLogin.events({
