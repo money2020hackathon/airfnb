@@ -181,22 +181,49 @@ background-color: #315481;
 	width: 40%;
 }
 
+
+
+.navsidebar {
+	color: black;
+}
 */
+.dropdown-content img {
+	width: 64px;
+	height: auto;
+}
+
+.nav-wrapper img {
+	width: 100px;
+}
 
 .nav-wrapper p {
 	padding-left: 20px; 
 }
 
+.nav-wrapper ul {
+	width: 100%;
+}
+
 .nav-wrapper li {
 	font-size: 18px;
 	font-family: 'myFont';
-	padding-right: 10px;
+	padding-right: 30px;
 	padding-left: 10px;
 	text-align: center;
+	display: inline;
+	display: block;
+	display: inline-block;
 }
 
-.navsidebar {
-	color: black;
+.userlogin-navbar ul {
+		float: right;
+		display: inline;
+}
+
+.userlogin-navbar li {
+	list-style-type: none;
+	display: inline;
+	display: block;
 }
 
 .menu li {
@@ -239,4 +266,15 @@ background-color: #315481;
 	margin: 0px;
 	font-size: 15px;
 	background-color: rgba(0,0,0,0.2);
+}
+
+/*
+	PROFILE PAGE
+*/
+.dropdown-button img {
+	width: 100px;
+}
+
+.profile-nav li {
+
 }
