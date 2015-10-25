@@ -7,6 +7,7 @@ Template.userLogin.onRendered(function(){
 			$(info).toggle();
 		}
   $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
 });
 
 Template.userLogin.events({
@@ -15,7 +16,11 @@ Template.userLogin.events({
   	console.log("clicked");
   },
   'click #paymentPage':function(){
-  	Router.go('paymentPage'); //name of template i want to go to
+  	Router.go('paymentPage', {'_id':"testId"}); //name of template i want to go to
+  	console.log("clicked");
+  },
+  'click #profilePage':function(){
+  	Router.go('profilePage'); //name of template i want to go to
   	console.log("clicked");
   }
 

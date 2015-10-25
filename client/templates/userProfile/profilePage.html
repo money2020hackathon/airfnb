@@ -1,14 +1,6 @@
-<template name="userLogin">
+<template name="profilePage">
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
-<script>
-		$(document).ready(function(){
-		     $(".menu").hide();
-		});
 
-		function toToggle(info) {
-			$(info).toggle();	
-		}
-</script>
 	<div>
 		<!-- Dropdown Structure -->
 		<ul id="dropdown1" class="dropdown-content">
@@ -36,15 +28,28 @@
 			    </ul>
 		  	</div>
 		</nav>
-
- 		<div>
- 			<ul class="menu">
-			    <li class="col-md-3 col-xs-3"><a href="#"><i class="fa fa-dollar"></i>  Price</a></li>
-			    <li class="col-md-3 col-xs-3"><a href="#"><i class="fa fa-heart"></i>  Rating</a></li>
-			    <li class="col-md-3 col-xs-3"><a href="#"><i class="fa fa-car"></i>  Distance</a></li>
-			    <li class="col-md-3 col-xs-3"><a href="#"><i class="fa fa-clock-o"></i>  Time</a></li>
-		  	</ul>
- 		</div>
+		
+		
+		<!--
+		
+		<nav>
+  			<div class="nav-wrapper">
+			    <ul class="right hide-on-med-and-down">
+		 			<li class="input-field col-md-6 col-xs-6">
+				    	<i class="fa fa-search fa-4x prefix"></i>
+				    	<input id="icon_prefix" type="text" class="validate">
+						<label for="icon_prefix" style="color: white;"> Search</label>
+				    </li>
+				   <li onClick="toToggle('.menu')" class="input-field filterList col-md-3 col-xs-3">
+						  	<i class="fa fa-filter fa-4x"></i>
+					</li>
+				    <li class="dropdown-button col-md-3 col-xs-3" data-activates="dropdown1">
+				    	<img src="eatzy.png">
+				    </li>
+			    </ul>
+		  	</div>
+		</nav>
+-->
 
 		<div class="col-md-6 col-xs-12">
 			<div class="card">
