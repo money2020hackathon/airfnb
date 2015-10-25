@@ -58,3 +58,8 @@ mrt:qr-scanner
 dschulz:jquery-qrcode
 http
 random
+edgee:slingshot
+thinksoftware:image-resize-client
+ccorcos:clientside-image-manipulation
+check
+ejson
