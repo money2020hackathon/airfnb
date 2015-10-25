@@ -16,7 +16,7 @@ Template.qrCodeFinished.helpers({
 
     var remainingTransactions = TransactionRecordsCollection.find({
       'orderId':orderId
-    }).fetch().length;  
+    }).fetch().length;
 
     return remainingTransactions;
   }
@@ -27,6 +27,6 @@ Template.qrCodeFinished.events({
     Router.go('qrCodeScan');
   },
   'click #goBack':function(){
-    Router.go('home');
+    Router.go('userLogin');
   }
 });
