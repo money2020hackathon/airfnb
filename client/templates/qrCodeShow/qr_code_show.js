@@ -17,8 +17,9 @@ Template.qrCodeShow.onRendered(function () {
 
 Template.qrCodeShow.helpers({
   isCollected:function(){
-    var transactionId = String(this);
-    var transaction = TransactionRecordsCollection.find({
+    var transactionId = this+"";
+
+    var transaction = TransactionRecordsCollection.findOne({
       '_id':transactionId
     });
 

@@ -1,0 +1,10 @@
+<template name="qrCodeFinished">
+<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+  <div>Collection Successful</div>
+
+  {{#if remainingTransactions}}
+    <div>{{remainingTransactions}} orders more to go!</div>
+  {{/if}}
+  <Button id="scanAnother">Scan Another</Button>
+  <Button id="goBack">Cancel</Button>
+</template>
