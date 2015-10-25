@@ -8,7 +8,7 @@ Template.createOrderPage.onCreated(function(){
 })
 
 Template.createOrderPage.onRendered(function(){
-  new WOW().init();
+  //new WOW().init();
 
 
 });
@@ -44,4 +44,3 @@ Template.createOrderPage.onRendered(function(){
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
 });
-

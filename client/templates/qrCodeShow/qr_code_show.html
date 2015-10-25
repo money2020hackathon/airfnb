@@ -1,4 +1,10 @@
 <template name="qrCodeShow">
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
   <div id="qrcode"></div>
+  {{#if isCollected}}
+  <div>Collected</div>
+  {{else}}
+  <div>Not Yet Collected</div>
+  {{/if}}
+
 </template>
