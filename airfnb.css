@@ -47,6 +47,10 @@ background-color: #315481;
   color: white;
 }
 
+.insightics img {
+	width: 100%;
+}
+
 /*
 	LOGIN
 */
