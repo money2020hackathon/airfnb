@@ -14,7 +14,17 @@ function scanBarcode() {
             console.log("BAR CODE " + result.text);
             descriptionCharCount.set(result.text);
             if( !result.cancelled ) {
-                //scanBarcode();
+              Meteor.call('updateOrderCollected', result.text, function(error, result){
+                if(error)
+                {
+                  //sAlert.error(error, {effect: 'genie', position:'top', offset: '30px'});
+                }
+                else
+                {
+                  Router.go('qrCodeFinished', {'_id':result.text});
+                  //update result
+                }
+              });
             }
         },
         function(error) {

@@ -11,7 +11,7 @@ $(".button-collapse").sideNav();
   }
   else{
       $('#qrcode').qrcode({
-        size: 400,
+        size: 300,
         text: this.data
       });
   }
@@ -19,12 +19,14 @@ $(".button-collapse").sideNav();
 
 Template.qrCodeShow.helpers({
   isCollected:function(){
-    var transactionId = String(this);
-    var transaction = TransactionRecordsCollection.find({
+    var transactionId = this+"";
+
+    var transaction = TransactionRecordsCollection.findOne({
       '_id':transactionId
     });
 
     if(transaction.completed){
+      Router.go('qrCollectFinish');
       return true;
     }else{
       return false;

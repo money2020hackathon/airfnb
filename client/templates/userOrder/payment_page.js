@@ -121,7 +121,7 @@ Template.paymentPage.events({
     console.log(selectedToken);
 
     //start payeezy transaction
-    Meteor.call('payForOrder', 'testOrderId', selectedToken, "688", function(error, result){
+    Meteor.call('payForOrder', 'aNyrjWxtejR9p3HXh', selectedToken, "688", function(error, result){
             if(error)
             {
               sAlert.error(error, {effect: 'genie', position:'top', offset: '30px'});
@@ -131,7 +131,7 @@ Template.paymentPage.events({
               //update result
               var transactionId = TransactionRecordsCollection.insert({
                 'buyer':Meteor.userId(),
-                'orderId':"testOrderId",
+                'orderId':"aNyrjWxtejR9p3HXh",
                 'completed':false
               });
 
