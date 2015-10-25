@@ -266,7 +266,8 @@ li#profilePage.navbartop {
 }
 
 .card img {
-	height: 400px;
+	height: 350px;
+	padding-bottom: 10px; 
 }
 
 .card-content ul {
@@ -280,6 +281,10 @@ li#profilePage.navbartop {
 	line-height: 110%;
 	padding: 0px;
 	margin: 0px;
+}
+
+.card-review {
+	display: inline-block;
 }
 
 .card-reveal img {
