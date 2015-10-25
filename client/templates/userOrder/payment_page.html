@@ -9,7 +9,7 @@
     <form>
       <div class="row">
         <div class="input-field">
-          <textarea id="cardNumberText" class="materialize-textarea"></textarea>
+          <input id="cardNumberText" type="text" placeholder="1234 5678 9012 3456">
           <label for="messageText">Card Number</label>
         </div>
       </div>
@@ -22,7 +22,7 @@
     </form>
   </div>
   <div class="modal-footer">
-    <a href="#!" id="addCreditCard" class="modal-action modal-close waves-effect waves-green btn-flat">Add Card</a>
+    <a id="confirmCC" target="newCardModal" class="modal-action modal-close waves-effect waves-green btn-flat">Add Card</a>
   </div>
 </div>
 </template>

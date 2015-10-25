@@ -51,10 +51,16 @@ var Payeezy = function() {
                 };
                 o++
             }
-            if (!this.mercId) {
+            if (!this.js_security_key) {
                 i = 400;
                 u[o] = {
-                    description: "Please set the Merchant Identifier"
+                    description: "Please set the js_security_key"
+                }
+            }
+            if (!this.ta_token) {
+                i = 400;
+                u[o] = {
+                    description: "Please set the ta_token"
                 }
             }
             if (u.length > 0) {
@@ -64,17 +70,40 @@ var Payeezy = function() {
                 e(i, s);
                 return false
             }
-            
-            var a = "https://" + n + "/v1/securitytokens?apikey=" + this.apikey + "&trtoken=" + this.mercId + "&callback=Payeezy.callback&type=transarmor&credit_card.type=" + r["card_type"] + "&credit_card.cardholder_name=" + r["cardholder_name"] + "&credit_card.card_number=" + r["cc_number"] + "&credit_card.exp_date=" + r["exp_month"] + r["exp_year"] + "&credit_card.cvv=" + r["cvv_code"];
+            var a = "https://" + n + "/v1/securitytokens?apikey=" + this.apikey + "&js_security_key=" + this.js_security_key + "&callback=Payeezy.callback&auth=" + this.auth + "&ta_token=" + this.ta_token + "&type=FDToken&credit_card.type=" + this.cardType + "&credit_card.cardholder_name=" + this.cardHolderName + "&credit_card.card_number=" + this.cardNumber + "&credit_card.exp_date=" + this.cardExpMonth + this.cardExpYear + "&credit_card.cvv=" + this.cardCVV;
             var f = document.createElement("script");
             f.src = a;
             document.getElementsByTagName("head")[0].appendChild(f)
         },
+        setAuth:function(e){
+          this["auth"] = e;
+        },
+        setCardType: function(e){
+          this["cardType"] = e;
+        },
+        setCardHolderName:function(e){
+          this["cardHolderName"] = e;
+        },
+        setCardNumber:function(e){
+          this["cardNumber"] = e;
+        },
+        setCardCVV:function(e){
+          this["cardCVV"] = e;
+        },
+        setCardExpYear:function(e){
+          this["cardExpYear"] = e;
+        },
+        setCardExpMonth:function(e){
+          this["cardExpMonth"] = e;
+        },
         setApiKey: function(e) {
             this["apikey"] = e
         },
-        setMerchantIdentifier: function(e) {
-            this["mercId"] = e
+        setJs_Security_Key: function(e) {
+            this["js_security_key"] = e
+        },
+        setTa_token: function(e) {
+            this["ta_token"] = e
         },
         callback: function(e) {
             this["clientCallback"](e.status, e.results)
