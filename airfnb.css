@@ -44,6 +44,7 @@ background-color: #315481;
   right: 0;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 /*
@@ -104,7 +105,7 @@ background-color: #315481;
 */
 
 .navbar {
-	height: 15px;
+	height: 20px;
 	padding: 0px;
 	margin: 0px;
 	display: block;
@@ -148,12 +149,94 @@ background-color: #315481;
 /*
 	LOGIN PAGE
 */
-.login-left {
-
-}
-
-
 .logincook-bottom {
 	height: 500px;
 	overflow: scroll;
+}
+
+/*
+	USER LOGIN PAGE
+
+.userlogin-main {
+	text-align: center;
+	margin-top: 80px; 
+}
+
+.userlogin-main p {
+	font-size: 30px;
+	line-height: 80%;
+}
+
+.userlogin-input {
+	text-align: center;
+}
+
+.userlogin-input input {
+	padding: 2px;
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	outline: none;
+	text-align: center;
+	border-radius: 20px;
+	width: 40%;
+}
+
+*/
+
+.nav-wrapper p {
+	padding-left: 20px; 
+}
+
+.nav-wrapper li {
+	font-size: 18px;
+	font-family: 'myFont';
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+.navsidebar {
+	color: black;
+}
+
+.menu li {
+	float: right;
+}
+
+.menu a {
+	color: black;
+	text-align: center;
+}
+
+.menu a:hover {
+	text-decoration: none;
+}
+
+.card img {
+	height: 400px;
+}
+
+.card-content ul {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+.card-content li {
+	font-size: 15px;
+	line-height: 110%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.card-reveal img {
+	height: 50px;
+	width: auto;
+}
+
+.cardreview-title.card-title {
+	padding: 0px;
+	margin: 0px;
+	font-size: 15px;
+	background-color: rgba(0,0,0,0.2);
 }

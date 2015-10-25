@@ -52,7 +52,7 @@ npm-container
 twbs:bootstrap
 fourseven:scss
 mdg:camera
-materialize:materialize@=0.97.0
+materialize:materialize
 bookmd:creditcard-validator
 mrt:qr-scanner
 dschulz:jquery-qrcode
