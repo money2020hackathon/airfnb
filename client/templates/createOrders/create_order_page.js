@@ -179,6 +179,11 @@ Template.createOrderPage.helpers({
     return true;
   },
   foodImage:function(){
+
+    if(!imageurl.get()){
+      return "/chickenrice.jpg";
+    }
+
     return imageurl.get();
   }
 });
