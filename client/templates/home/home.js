@@ -4,8 +4,8 @@ Template.home.events({
   	console.log("clicked");
   },
 
-  'click #listingPage':function(){
-  	Router.go('listingPage'); //name of template i want to go to
+  'click #userLogin':function(){
+  	Router.go('userLogin'); //name of template i want to go to
   	console.log("clicked");
   }
 });
