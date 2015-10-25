@@ -54,3 +54,5 @@ fourseven:scss
 mdg:camera
 materialize:materialize@=0.97.0
 bookmd:creditcard-validator
+dschulz:jquery-qrcode
+mrt:qr-scanner
