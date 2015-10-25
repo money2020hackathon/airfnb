@@ -1,5 +1,5 @@
 Template.qrCodeShow.onRendered(function () {
-$(".button-collapse").sideNav();
+//$(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
 
   var transactionId = String(this);

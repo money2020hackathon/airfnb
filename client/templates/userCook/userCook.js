@@ -1,6 +1,6 @@
 Template.userCook.onRendered(function(){
-	$(".button-collapse").sideNav();
- 	$(".dropdown-button").dropdown();
+	//$(".button-collapse").sideNav();
+ 	//$(".dropdown-button").dropdown();
 });
 
 Template.userCook.events({
