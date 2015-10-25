@@ -1,6 +1,9 @@
 Template.layout.onRendered(function(){
-  $(".button-collapse").sideNav();
-  $(".dropdown-button").dropdown();
+  $(".button-collapse").sideNav({
+    closeOnClick: true
+  }
+  );
+
 });
 
 Template.layout.helpers({
