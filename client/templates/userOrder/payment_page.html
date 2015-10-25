@@ -1,7 +1,20 @@
 <template name="paymentPage">
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
-<button class="button" id="addCCButton">Add Credit Card</button>
+<img src={{foodImage}}>
+<div class="row">
+  <span class="input-field col s4">
+    <select id="creditCardSelect">
+      {{{creditCards}}}
+    </select>
+  </span>
+  <span><button class="button" id="addCCButton">Add Credit Card</button></span>
+</div>
+<div>
+  <button class="button" id="payButton">
+    Confirm Order
+  </button>
+</div>
 
 <div id="newCardModal" class="modal">
   <div class="modal-content">
