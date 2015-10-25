@@ -1,9 +1,14 @@
 var distanceFilter = 5;
 var updatingLocation = false;
 
+var currentLocation = Geolocation.latLng();
+var updated = new ReactiveVar(0);
+
+updateLocation();
 function updateLocation()
 {
-  var currentLocation = Geolocation.latLng();
+  currentLocation = Geolocation.latLng();
+  updated.set(updated.get() + 1);
 
   if(currentLocation)
   {
@@ -31,18 +36,7 @@ function updateLocation()
               mongoCoordLocation.coordinates = [currentLocation.lng, currentLocation.lat];
 
               //call update listing to update places around user according to distance limit
-              Meteor.call('updateMatchList', function(error, result){
-                      if(error)
-                      {
-                        sAlert.error(error, {effect: 'genie', position:'top', offset: '30px'});
-                      }
-                      else
-                      {
-                        //update result
-                      }
 
-                  return;
-              });
 
               break;
           }
@@ -75,6 +69,28 @@ Template.listingPage.onRendered(function(){
 Template.listingPage.helpers({
   listedItems:function(){
 
+    //try{
+    //  OrderCollection._ensureIndex({'location':"2dsphere"});
+    //}
+    //catch(err){
+
+    //}
+    //updated.set(updated.get() + 1);
+
+    return OrderCollection.find({});
+    return OrderCollection.find(
+      {
+        location:{
+          $near:{
+            $geometry:{
+              type:"Point",
+              coordinates:[currentLocation.lng, currentLocation.lat]
+            },
+            $maxDistance: 5 * 1609
+          }
+        }
+      }
+    );
   },
   subscriptionIsReady:function(){
     return true;
