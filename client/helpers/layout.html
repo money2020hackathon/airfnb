@@ -3,23 +3,26 @@
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
 <nav class="navbarside">
-  <ul class="right-side-nav hide-on-med-and-down">
-        <li class="navbartop" id="profilePage"><img src="/dennis.png"> Dennis</li>
-        <li id="userLogin"><i class="fa fa-home fa-2x prefix"></i> Home</li>
-        <li><i class="fa fa-star fa-2x prefix"></i> Favourites</li>
-        <li><i class="fa fa-gear fa-2x prefix"></i> Settings</li>
-        <li id="userCook"><i class="fa fa-cutlery fa-2x prefix"></i> Chef Mode</li>
+  <ul class="right-side-nav hide-on-med-and-down" style="margin-left:30px">
+        <li class="navbartop" id="profilePage"><img src="/dennis.png" style="border-radius: 20%; margin-left:20"> Dennis</li>
+        <li id="userLogin" style="padding-left:20px"><i class="fa fa-home fa-2x prefix"></i> Home</li>
+        <li style="margin-left:20px"><i class="fa fa-star fa-2x prefix"></i> Favourites</li>
+        <li id="orders" style="margin-left:20px"><i class="fa fa-tags fa-2x prefix"></i> Orders</li>
+        <li style="margin-left:20px"><i class="fa fa-gear fa-2x prefix"></i> Settings</li>
+        <li id="userCook" style="margin-left:20px"><i class="fa fa-cutlery fa-2x prefix"></i> Chef Mode</li>
   </ul>
   <ul id="slide-out" class="side-nav">
-    <li id="profilePage"><img src="dennis.png"> Dennis</li>
-        <li id="userLogin"><i class="fa fa-home fa-2x prefix"></i> Home</li>
-        <li><i class="fa fa-star fa-2x prefix"></i> Favourites</li>
-        <li><i class="fa fa-gear fa-2x prefix"></i> Settings</li>
-        <li id="userCook"><i class="fa fa-cutlery fa-2x  prefix"></i> Chef Mode</li>
+    <li id="profilePage"><img src="dennis.png" style="border-radius: 20%;margin-left:30px;margin-top:20px"> Dennis</li>
+        <li id="userLogin" style="margin-left:20px;margin-top:20px"><i class="fa fa-home fa-2x prefix"></i> Home</li>
+        <li style="margin-left:20px"><i class="fa fa-star fa-2x prefix"></i> Favourites</li>
+        <li id="orders" style="margin-left:20px"><i class="fa fa-tags fa-2x prefix"></i> Orders</li>
+        <li style="margin-left:20px"><i class="fa fa-gear fa-2x prefix"></i> Settings</li>
+        <li id="userCook" style="margin-left:20px"><i class="fa fa-cutlery fa-2x  prefix"></i> Chef Mode</li>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <a href="#" data-activates="slide-out" class="button-collapse" style="margin-left:30px"><i class="mdi-navigation-menu"></i></a>
 </nav>
-
+{{#unless isLoggedIn}}
   {{> loginButtons}}
+{{/unless}}
   {{> yield}}
 </template>
