@@ -6,23 +6,99 @@
 		 url('font/HelveticaNeue-UltraLight.ttf') format('truetype'),
 		 url('font/HelveticaNeue-UltraLight.svg') format('svg');
 }
-/* CSS declarations go here */
-body {
-  font-family: 'myFont';
-  background-color: #315481;
+/* CSS declarations go here 
+background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
+*/
 
+.login {
+  font-family: 'myFont';
+  background: url(veggies.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   padding: 0;
   margin: 0;
 }
 
+.home {
+  font-family: 'myFont';
+  background: url(family.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+	LOGIN
+*/
+
+.login {
+	font-family: 'myFont';
+	margin-top: 250px;
+}
+
+.inputfields {
+	text-align: center;
+}
+
+.inputfields input {
+	padding: 5px;
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+	outline: none;
+	text-align: center;
+	border-radius: 20px;
+	width: 70%;
+}
+
+.inputfields img {
+	width: 60px;
+	height: 60px;
+}
+
+.inputfields img {
+	background-color: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+   font-weight: bold;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+   font-weight: bolder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white; 
+   font-weight: bolder;
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+   font-weight: bolder;
+}
 /*
 	NAVBAR
 */
@@ -40,7 +116,7 @@ body {
 
 .navbar li {
 	list-style-type: none;
-	color: white;
+	color: black;
 	font-family: 'myFont';
 	font-size: 18px;
 	padding: 5px;	
@@ -56,21 +132,28 @@ body {
 	color: white;
 }
 
-/*
-	LOGIN PAGE
-*/
-.loginWelcome {
+.homeToLogin {
 	color: white;
 	text-align: center;
 	height: 100%;
 }
 
-.login-right, .login-left {
+.home-right, .home-left {
 	width: 48%;
 	height: 60%;
 	margin: 10px;
 	background-color: rgba(0,0,0,0.3);
 }
 
+/*
+	LOGIN PAGE
+*/
+.login-left {
+
+}
 
 
+.logincook-bottom {
+	height: 500px;
+	overflow: scroll;
+}
