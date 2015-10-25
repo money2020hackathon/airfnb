@@ -52,6 +52,14 @@ background-color: #315481;
 }
 
 /*
+
+*/
+
+.createorder-basics input {
+	padding-bottom: 30px;
+}
+
+/*
 	LOGIN
 */
 
@@ -348,6 +356,10 @@ li#profilePage.navbartop {
 	height: 50%;
 	text-align: center;
 	background-color: #EA555E;
+}
+
+.payment-cardnum {
+	padding-top: 20px;
 }
 
 .payment-cfmbtn {
