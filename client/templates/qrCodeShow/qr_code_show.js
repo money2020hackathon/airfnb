@@ -9,7 +9,7 @@ Template.qrCodeShow.onRendered(function () {
   }
   else{
       $('#qrcode').qrcode({
-        size: 400,
+        size: 300,
         text: this.data
       });
   }
@@ -24,6 +24,7 @@ Template.qrCodeShow.helpers({
     });
 
     if(transaction.completed){
+      Router.go('qrCollectFinish');
       return true;
     }else{
       return false;
