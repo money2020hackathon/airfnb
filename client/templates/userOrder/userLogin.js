@@ -22,6 +22,10 @@ Template.userLogin.events({
   'click #profilePage':function(){
   	Router.go('profilePage'); //name of template i want to go to
   	console.log("clicked");
+  },
+   'click #userCook':function(){
+    Router.go('userCook'); //name of template i want to go to
+    console.log("clicked");
   }
 
 });

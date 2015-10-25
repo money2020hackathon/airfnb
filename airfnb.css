@@ -82,27 +82,53 @@ background-color: #315481;
 }
 
 ::-webkit-input-placeholder {
-   color: white;
+   color: black;
    font-weight: bold;
+   padding: 0px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: white;  
+   color: black;  
    font-weight: bolder;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white; 
+   color: black; 
    font-weight: bolder;
 }
 
 :-ms-input-placeholder {  
-   color: white;  
+   color: black;  
    font-weight: bolder;
+      padding: 0px;
+
 }
 /*
 	NAVBAR
 */
+.navbarside img {
+	width: 100px;
+	height: auto;
+}
+
+.navbartop img {
+	width: 60px;
+	height: auto;
+}
+
+li#profilePage.navbartop {
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbarside li {
+	list-style-type: none;
+	color: black;
+	font-family: 'myFont';
+	font-size: 18px;	
+	padding: 5px;
+	padding-right: 5px;
+}
 
 .navbar {
 	height: 20px;
@@ -275,6 +301,55 @@ background-color: #315481;
 	width: 100px;
 }
 
-.profile-nav li {
+/*
+	USER COOK
+*/
+.usercook-table {
+	table-layout: fixed;
+	height: 500px;
+	width: 100%;
+	background-color: #808080;
+}
 
+.usercook-table img {
+	width: 30%;
+	margin: auto;
+}
+
+.usercook-table td {
+	border: 4px solid white;
+	width: 100%;
+	text-align: center;
+}
+
+.usercook-table a {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+/*
+	PAYMENT PAGE
+*/
+.payment-text {
+	font-family: 'myFont';
+	color: white;
+	height: 50%;
+	text-align: center;
+	background-color: #EA555E;
+}
+
+.payment-cfmbtn {
+	text-align: center;	
+}
+
+.payment-select {
+	width: 70%;
+}
+
+.payment-img {
+	width: 50%;
+	height: auto;
 }

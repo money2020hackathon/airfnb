@@ -1,101 +1,33 @@
-<template name="profilePage">
+<template name="userCook">
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
 	<div>
-		<!-- Dropdown Structure -->
-		<ul id="dropdown1" class="dropdown-content">
-			<li id="profilePage"><img src="dennis.png">Dennis</li>
-			<li><i class="fa fa-search fa-4x prefix"></i>Search</li>
-		    <li><i class="fa fa-star fa-4x prefix"></i>Favourites</li>
-		    <li><i class="fa fa-gear fa-4x prefix"></i>Settings</li>
-		    <li id="createOrderPage"><i class="fa fa-cutlery fa-4x prefix"></i>Chef Mode</li>
-		</ul>
-		<nav>
-  			<div class="nav-wrapper">
-			    <ul class="right hide-on-med-and-down">
-		 			<li class="input-field col-md-6 col-xs-6">
-				    	<i class="fa fa-search fa-4x prefix"></i>
-				    	<input id="icon_prefix" type="text" class="validate">
-						<label for="icon_prefix" style="color: white;"> Search</label>
-				    </li>
-				   <li onClick="toToggle('.menu')" class="input-field filterList col-md-3 col-xs-3">
-						  	<i class="fa fa-filter fa-4x"></i>
-					</li>
-				      <!-- Dropdown Trigger -->
-				    <li class="dropdown-button col-md-3 col-xs-3" data-activates="dropdown1">
-				    	<img src="eatzy.png">
-				    </li>
-			    </ul>
-		  	</div>
-		</nav>
+		<div class="col-md-12 col-xs-12">
+			<table class="usercook-table">
+				<tr>
+					<td style="background-color: #FFD39B">
+						<a href="#"><img src="pot.png"></a>
+						<p>List new dish</p>
+					</td>
+					<td style="background-color: #FFE9D8">
+						<a href="#"><img src="mail.png"></a>
+						<p>Inbox</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color: #FFE9D8">
+						<img id="qrCodeScan" src="qrcode.png">
+						<p>Scan Barcode</p>
+					</td>
+					<td style="background-color: #FFD39B">
+						<a href="#"><img src="send.png"></a>
+						<p>Insightics</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+
 		
-
-		<div class="col-md-6 col-xs-12">
-			<div class="card">
-			    <div class="card-image waves-effect waves-block waves-light">
-			    	<img class="activator" src="userlogin1.jpg">
-			    	<span class="card-title cardreview-title">Click photo for Reviews</span>
-			    </div>
-			    <div class="card-content">
-			    	<span class="card-title grey-text text-darken-4">
-			    		<ul class="col-md-6 col-xs-6">
-			    			<li>Sze Chuan Family Feast</li>
-			    			<li><i class="fa fa-map-marker"></i>123 sunset st, San Francisco (0.1 miles)</li>
-			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
-			    		</ul>
-			    		<p class="col-md-2 col-xs-2"><b>$6</b></p>
-			    		<ul class="col-md-4 col-xs-4">
-			    			<li>Order by 5pm today</li>
-			    			<li style="padding-top: 5px;"><button id="paymentPage" type="button" class="btn">Order now</button></li>
-			    		</ul>
-			    	</span>
-			    </div>
-			    <div class="card-reveal">
-			    	<span class="card-title grey-text text-darken-4">Reviews</span>
-			    	<div class="card-review">
-			    		<img src="sample.jpg" class="col-md-4">
-			    		<ul class="col-md-8">
-			    			<li>First time trying out and i reaaaaaaaaaly enjoyed the food!!</li>
-			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
-			    		</ul>
-			    	</div> 
-			    	<div class="card-review">
-			    		<img src="sample.jpg" class="col-md-4">
-			    		<ul class="col-md-8">
-			    			<li>Friendly owner/seller? and really nice food!!</li>
-			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
-			    		</ul>
-			    	</div> 
-			    </div>
-			</div>
-		</div>
-
-		<div class="col-md-6 col-xs-12">
-			<div class="card">
-			    <div class="card-image waves-effect waves-block waves-light">
-			    	<img class="activator" src="userlogin2.jpg">
-			    	<span class="card-title cardreview-title">Click photo for Reviews</span>
-			    </div>
-			    <div class="card-content">
-			    	<span class="card-title grey-text text-darken-4">
-			    		<ul class="col-md-6 col-xs-6">
-			    			<li>Mexican Tacos</li>
-			    			<li><i class="fa fa-map-marker"></i>123 sunset st, San Francisco (0.1 miles)</li>
-			    			<li><i class="fa fa-heart"></i><i class="fa fa-heart"></i></li>
-			    		</ul>
-			    		<p class="col-md-2 col-xs-2"><b>$8.50</b></p>
-			    		<ul class="col-md-4 col-xs-4">
-			    			<li>Order by 7pm today</li>
-			    			<li style="padding-top: 5px;"><button id="paymentPage" type="button" class="btn">Order now</button></li>
-			    		</ul>
-			    	</span>
-			    </div>
-			    <div class="card-reveal">
-			    	<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right"></i></span>
-			    	<p>Here is some more information about this product that is only revealed once clicked on.</p>
-			    </div>
-			</div>
-		</div>
 		
 	</div>
 </template>
